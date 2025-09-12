@@ -1,0 +1,39 @@
+{
+  "id": "7666892e-58ac-44f6-8f18-e469f6cbe1d2",
+  "name": "RepoTest12",
+  "publisher": "Default Publisher",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [
+    {
+      "id": "db643212-b7fb-4dd4-b5a8-cb44ac714461",
+      "name": "India GST",
+      "publisher": "Microsoft",
+      "version": "26.4.37194.38700"
+    }
+  ],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "25.0.0.0",
+  "idRanges": [
+    {
+      "from": 60600,
+      "to": 90149
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "14.0",
+  "features": [
+    "NoImplicitWith"
+  ]
+}
