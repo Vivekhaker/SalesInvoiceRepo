@@ -13,11 +13,11 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       - name: Run AL-Go pipeline (build)
         # correct action (AL-Go actions repo, RunPipeline action)
-        uses: microsoft/AL-Go-Actions/RunPipeline@v4
+        uses: microsoft/AL-Go-Actions/RunPipeline@v3
 
         # optional: set GITHUB_TOKEN (action usually reads it),
         # and other secrets if you later publish.
