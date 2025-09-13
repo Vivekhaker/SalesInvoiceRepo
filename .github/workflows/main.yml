@@ -1,0 +1,23 @@
+name: AL-Go CI
+
+# Kab run karna hai
+on:
+  push:
+    branches: [ "main" ]      # jab main branch pe push ho
+  pull_request:
+    branches: [ "main" ]      # jab PR main branch pe aayega
+
+jobs:
+  build:
+    runs-on: windows-latest   # Windows runner chahiye Business Central ke liye
+
+    steps:
+      # Step 1: Code checkout
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Step 2: AL-Go build run karna
+      - name: Run AL-Go build
+        uses: microsoft/AL-Go@main
+        with:
+          doNotPublishApps: true   # Sirf build kare, publish na kare
