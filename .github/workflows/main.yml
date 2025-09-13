@@ -1,0 +1,25 @@
+name: AL-Go CI (fixed)
+
+on:
+  push:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@main
+
+      - name: Run AL-Go pipeline (build)
+        # correct action (AL-Go actions repo, RunPipeline action)
+        uses: microsoft/AL-Go-Actions/RunPipeline@main
+
+        # optional: set GITHUB_TOKEN (action usually reads it),
+        # and other secrets if you later publish.
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
