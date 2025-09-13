@@ -17,7 +17,7 @@ jobs:
 
       - name: Run AL-Go pipeline (build)
         # correct action (AL-Go actions repo, RunPipeline action)
-        uses: microsoft/AL-Go-Actions/RunPipeline@v3
+        uses: microsoft/AL-Go-Actions/RunPipeline@v4
 
         # optional: set GITHUB_TOKEN (action usually reads it),
         # and other secrets if you later publish.
