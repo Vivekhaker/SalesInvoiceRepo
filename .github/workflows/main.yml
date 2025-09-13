@@ -1,23 +1,26 @@
-name: AL-Go CI
+name: AL-Go CI (fixed)
 
-# Kab run karna hai
 on:
   push:
-    branches: [ "main" ]      # jab main branch pe push ho
-  pull_request:
-    branches: [ "main" ]      # jab PR main branch pe aayega
+    branches: [ "main" ]
+
+permissions:
+  contents: read
 
 jobs:
   build:
-    runs-on: windows-latest   # Windows runner chahiye Business Central ke liye
+    runs-on: windows-latest
 
     steps:
-      # Step 1: Code checkout
-      - name: Checkout
+      - name: Checkout repo
         uses: actions/checkout@v4
 
-      # Step 2: AL-Go build run karna
-      - name: Run AL-Go build
-        uses: microsoft/AL-Go@main
-        with:
-          doNotPublishApps: true   # Sirf build kare, publish na kare
+      - name: Run AL-Go pipeline (build)
+        # correct action (AL-Go actions repo, RunPipeline action)
+        uses: microsoft/AL-Go-Actions/RunPipeline@v3
+
+        # optional: set GITHUB_TOKEN (action usually reads it),
+        # and other secrets if you later publish.
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+f build kare, publish na kare
