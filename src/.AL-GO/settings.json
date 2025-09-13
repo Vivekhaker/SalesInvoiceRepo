@@ -1,0 +1,11 @@
+{
+    "repoVersion": "1.0",
+    "projects": [
+      {
+        "appFolders": [
+          "src"
+        ]
+      }
+    ]
+  }
+  
